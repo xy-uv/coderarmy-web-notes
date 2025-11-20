@@ -33,8 +33,8 @@ let counter = 0;
 counter = 1; //* This is allowed.
 
 //? Initialization
-let name; //* Allowed. 'name' is now undefined.
-name = "Alice";
+let nam; //* Allowed. 'name' is now undefined.
+nam = "Alice";
 
 //? Temporal Dead Zone
 console.log(myLetVar); //! ReferenceError: Cannot access 'myLetVar' before initialization
@@ -56,3 +56,9 @@ console.log(myVar); //* Outputs: "Hello"
 //? Redeclaration
 var x = 10;
 var x = 20; //* Allowed. x is now 20.
+
+//* STRING
+
+let name = "Alice";
+let greeting = "Hello, World!";
+let template = `User: ${name}`; //? Template literals can embed expressions
