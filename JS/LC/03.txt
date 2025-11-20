@@ -1,0 +1,20 @@
+    [ THE CALL STACK ]                                [ THE HEAP ]
+      (Fixed-size, 32-bit slots)                     (Dynamic-size data)
+      
+      ...
+      ---------------------------
+      | user:     <ptr 0x50A1>  | -----------------> 0x50A1: { id: 10 }
+      |-------------------------|
+      | isActive: <ptr 0x0110>  | ------\
+      |-------------------------|       |
+      | name:     <ptr 0x44B2>  | ----\ |
+      |-------------------------|     | |
+      | price:    <ptr 0x33C3>  | --\ | |
+      |-------------------------|   | | |
+      | counter:  10 (as Smi)   |   | | |        (Read-Only Singletons)
+      ---------------------------   | | |
+                                    | | |----> 0x0110: [ The one 'true' object ]
+                                    | |
+                                    | \------> 0x44B2: [ String object: "Alice" ]
+                                    |
+                                    \--------> 0x33C3: [ HeapNumber object: 29.99 ]
