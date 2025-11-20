@@ -82,3 +82,18 @@ let data = null; //? Intentionally set to have no value
 //* BIGINT
 const veryLargeNumber = 9007199254740991n; //? The 'n' makes it a BigInt
 const anotherBigInt = BigInt(90071992547409929n);
+
+//* OBJECT Literal
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+
+//* ARRAY Literal
+let numbers = [10, 20, 30, 40];
+
+//* Functions
+function greet() {
+  console.log("Hello");
+}
