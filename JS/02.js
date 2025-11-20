@@ -97,3 +97,22 @@ let numbers = [10, 20, 30, 40];
 function greet() {
   console.log("Hello");
 }
+
+//* PRIMITIVE pass by value
+let a = 10;
+let b = a; //? The value 10 is copied into b
+
+b = 20; //? This only changes b
+
+console.log(a); //? Outputs: 10 (a is unaffected)
+console.log(b); //? Outputs: 20
+
+//* NON-PRIMITIVE pass by reference (Object)
+let obj1 = { value: 10 };
+let obj2 = obj1; //? The reference to the object is copied into obj2
+
+//? Both obj1 and obj2 now point to the exact same object in memory
+obj2.value = 20; //? We are modifying the object through obj2
+
+console.log(obj1.value); //? Outputs: 20 (obj1 is affected because it points to the same object)
+console.log(obj2.value); //? Outputs: 20
