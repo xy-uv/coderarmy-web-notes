@@ -58,7 +58,27 @@ var x = 10;
 var x = 20; //* Allowed. x is now 20.
 
 //* STRING
-
 let name = "Alice";
 let greeting = "Hello, World!";
 let template = `User: ${name}`; //? Template literals can embed expressions
+
+//* NUMBER
+let integerValue = 100;
+let floatValue = 3.14;
+let notANumber = NaN; //? Result of an invalid math operation like 0 / 0
+let infinity = Infinity;
+
+//* BOOLEAN
+let isActive = true;
+let isComplete = false;
+
+//* UNDEFINED
+let user;
+console.log(user); //? Outputs: undefined
+
+//* NULL
+let data = null; //? Intentionally set to have no value
+
+//* BIGINT
+const veryLargeNumber = 9007199254740991n; //? The 'n' makes it a BigInt
+const anotherBigInt = BigInt(90071992547409929n);
