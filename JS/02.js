@@ -116,3 +116,16 @@ obj2.value = 20; //? We are modifying the object through obj2
 
 console.log(obj1.value); //? Outputs: 20 (obj1 is affected because it points to the same object)
 console.log(obj2.value); //? Outputs: 20
+
+//* @typeof operator for type checking
+typeof "Hello"; //? "string"
+typeof 42; //? "number"
+typeof true; //? "boolean"
+typeof undefined; //? "undefined"
+typeof 10n; //? "bigint"
+typeof Symbol("id"); //? "symbol"
+
+typeof { a: 1 }; //? "object"
+typeof [1, 2, 3]; //? "object"
+typeof function () {}; //? "function" (a special case for functions)
+typeof null; //? "object" (this is a long-standing, well-known bug in JavaScript)
